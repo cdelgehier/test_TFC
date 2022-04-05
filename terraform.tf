@@ -7,4 +7,10 @@ terraform {
       version = "~> 4.8"
     }
   }
+
+  backend "remote" {
+    hostname     = "app.terraform.io"
+    organization = "cdelgehier-certif"
+    workspaces { name = "test_TFC" }
+  }
 }
